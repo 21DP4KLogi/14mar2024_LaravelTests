@@ -16,7 +16,8 @@ return new class extends Migration
             $table->string('name');
             $table->text('description');
             $table->string('bannerAddress');
-            $table->integer('userCount');
+            $table->integer('userCount')->default(0);
+            $table->timestamps();
         });
     }
 

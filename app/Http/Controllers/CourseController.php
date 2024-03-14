@@ -14,6 +14,11 @@ class CourseController extends Controller
             'description' => 'required',
             'bannerAddress' => 'required',
         ]);
+
+        $course = Course::create($validated);
+
+        return response()->json($course);
+
     }
 
     public function index(Request $request) {
